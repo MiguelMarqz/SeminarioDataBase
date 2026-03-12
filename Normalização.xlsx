@@ -1,0 +1,226 @@
+INSERT INTO Organizador (nome, telefone, email, cpf_cnpj) VALUES
+('João Silva', '999999999', 'joao@email.com', '12345678901'),
+('Maria Oliveira', '988888888', 'maria@email.com', '98765432100'),
+('Pedro Santos', '977777777', 'pedro@email.com', '12312312312'),
+('Ana Costa', '966666666', 'ana@email.com', '11122233344'),
+('Carlos Souza', '955555555', 'carlos@email.com', '55555555555'),
+('Fernanda Lima', '944444444', 'fernanda@email.com', '44444444444'),
+('Ricardo Pereira', '933333333', 'ricardo@email.com', '33333333333'),
+('Juliana Lima', '922222222', 'juliana@email.com', '22222222222'),
+('Gustavo Almeida', '911111111', 'gustavo@email.com', '11111111111'),
+('Larissa Costa', '900000000', 'larissa@email.com', '10000000000');
+
+
+INSERT INTO Local (nome_local, endereco, cidade, estado) VALUES
+('Centro de Convenções', 'Rua 1, nº 100', 'São Paulo', 'SP'),
+('Auditório XYZ', 'Rua 2, nº 200', 'Rio de Janeiro', 'RJ'),
+('Teatro ABC', 'Rua 3, nº 300', 'Belo Horizonte', 'MG'),
+('Espaço Cultural', 'Rua 4, nº 400', 'Curitiba', 'PR'),
+('Centro Cultural', 'Rua 5, nº 500', 'Porto Alegre', 'RS'),
+('Teatro Municipal', 'Rua 6, nº 600', 'Salvador', 'BA'),
+('Palácio de Eventos', 'Rua 7, nº 700', 'Fortaleza', 'CE'),
+('Centro de Eventos', 'Rua 8, nº 800', 'Recife', 'PE'),
+('Estádio Nacional', 'Rua 9, nº 900', 'Brasília', 'DF'),
+('Centro de Congressos', 'Rua 10, nº 1000', 'Natal', 'RN');
+
+
+INSERT INTO CategoriaEvento (nome_categoria, descricao) VALUES
+('Show', 'Eventos musicais de grande porte'),
+('Teatro', 'Apresentações teatrais'),
+('Congresso', 'Eventos acadêmicos e profissionais'),
+('Feira', 'Exposição comercial e de negócios'),
+('Seminário', 'Encontros educativos e profissionais'),
+('Workshop', 'Cursos e oficinas'),
+('Festa', 'Eventos de confraternização'),
+('Palestra', 'Encontros de aprendizado e motivação'),
+('Lançamento', 'Eventos para lançamento de produtos'),
+('Exposição', 'Exposição de arte e cultura');
+
+
+INSERT INTO Evento (nome, data, horario, capacidade, descricao, id_local, id_categoria, id_organizador) VALUES
+('Show de Rock', '2025-07-15', '20:00:00', 5000, 'Show de rock com bandas locais e internacionais', 1, 1, 1),
+('Peça Teatral A', '2025-07-18', '19:00:00', 300, 'Peça de teatro aclamada pelo público', 2, 2, 2),
+('Congresso de Marketing', '2025-08-10', '09:00:00', 1000, 'Congresso sobre estratégias de marketing digital', 3, 3, 3),
+('Feira de Tecnologia', '2025-09-01', '10:00:00', 2000, 'Feira de inovação tecnológica', 4, 4, 4),
+('Seminário de Psicologia', '2025-09-15', '08:00:00', 500, 'Seminário de práticas psicoterapêuticas', 5, 5, 5),
+('Workshop de Fotografia', '2025-10-05', '14:00:00', 100, 'Workshop prático sobre técnicas de fotografia', 6, 6, 6),
+('Festa de Aniversário', '2025-10-20', '22:00:00', 300, 'Festa de confraternização empresarial', 7, 7, 7),
+('Palestra Motivacional', '2025-11-10', '18:00:00', 400, 'Palestra com foco em motivação e produtividade', 8, 8, 8),
+('Lançamento de Produto', '2025-11-15', '16:00:00', 600, 'Evento de lançamento de novos produtos tecnológicos', 9, 9, 9),
+('Exposição de Arte', '2025-12-01', '11:00:00', 150, 'Exposição de arte contemporânea', 10, 10, 10);
+
+
+INSERT INTO Cliente (nome, email, telefone, cpf) VALUES
+('Lucas Oliveira', 'lucas@email.com', '911223344', '12345678900'),
+('Fernanda Costa', 'fernanda@email.com', '922334455', '23456789011'),
+('Ricardo Silva', 'ricardo@email.com', '933445566', '34567890112'),
+('Camila Ferreira', 'camila@email.com', '944556677', '45678901223'),
+('Gustavo Pereira', 'gustavo@email.com', '955667788', '56789012334'),
+('Larissa Almeida', 'larissa@email.com', '966778899', '67890123445'),
+('Marcos Santos', 'marcos@email.com', '977889900', '78901234556'),
+('Juliana Rodrigues', 'juliana@email.com', '988990011', '89012345667'),
+('Paula Almeida', 'paula@email.com', '999001122', '90123456778'),
+('Rafael Martins', 'rafael@email.com', '911112233', '01234567889');
+
+
+INSERT INTO Ingresso (tipo, preco, quantidade, id_evento) VALUES
+('Pista', 100.00, 2000, 1),
+('VIP', 250.00, 1000, 1),
+('Meia-entrada', 50.00, 500, 2),
+('Inteira', 150.00, 300, 2),
+('Normal', 120.00, 1500, 3),
+('VIP', 300.00, 500, 3),
+('Estudante', 70.00, 800, 4),
+('Normal', 100.00, 1000, 4),
+('VIP', 180.00, 600, 5),
+('Estudante', 60.00, 100, 5);
+
+-- Venda
+INSERT INTO Venda (data_venda, valor_total, id_cliente, id_pagamento) VALUES
+('2025-07-01', 350.00, 1, 1),
+('2025-07-05', 150.00, 2, 2),
+('2025-07-10', 200.00, 3, 3),
+('2025-07-15', 400.00, 4, 4),
+('2025-07-20', 250.00, 5, 5),
+('2025-07-25', 300.00, 6, 6),
+('2025-07-30', 500.00, 7, 7),
+('2025-08-01', 600.00, 8, 8),
+('2025-08-05', 180.00, 9, 9),
+('2025-08-10', 350.00, 10, 10);
+
+
+INSERT INTO Pagamento (forma_pagamento, status, data_pagamento) VALUES
+('Cartão de Crédito', 'Aprovado', '2025-07-01'),
+('Boleto', 'Aprovado', '2025-07-05'),
+('Cartão de Crédito', 'Aprovado', '2025-07-10'),
+('Dinheiro', 'Aprovado', '2025-07-15'),
+('Cartão de Crédito', 'Aprovado', '2025-07-20'),
+('Boleto', 'Aprovado', '2025-07-25'),
+('Cartão de Crédito', 'Aprovado', '2025-07-30'),
+('Dinheiro', 'Aprovado', '2025-08-01'),
+('Cartão de Crédito', 'Aprovado', '2025-08-05'),
+('Boleto', 'Aprovado', '2025-08-10');
+
+
+INSERT INTO Fornecedor (nome, tipo_servico, contato) VALUES
+('Fornecedor A', 'Som', 'som@fornecedor.com'),
+('Fornecedor B', 'Iluminação', 'iluminacao@fornecedor.com'),
+('Fornecedor C', 'Catering', 'catering@fornecedor.com'),
+('Fornecedor D', 'Segurança', 'seguranca@fornecedor.com'),
+('Fornecedor E', 'Decoração', 'decoracao@fornecedor.com'),
+('Fornecedor F', 'Transporte', 'transporte@fornecedor.com'),
+('Fornecedor G', 'Marketing', 'marketing@fornecedor.com'),
+('Fornecedor H', 'Vendas', 'vendas@fornecedor.com'),
+('Fornecedor I', 'Tecnologia', 'tecnologia@fornecedor.com'),
+('Fornecedor J', 'Equipe de limpeza', 'limpeza@fornecedor.com');
+
+-- Serviço
+INSERT INTO Servico (nome, descricao, id_fornecedor) VALUES
+('Som Profissional', 'Sistema de som para grandes eventos', 1),
+('Iluminação LED', 'Iluminação de alta qualidade para eventos', 2),
+('Catering de Buffet', 'Serviço de buffet completo para eventos', 3),
+('Segurança privada', 'Equipe de segurança especializada', 4),
+('Decoração temática', 'Decoração personalizada para eventos', 5),
+('Transporte de convidados', 'Serviço de transporte para convidados', 6),
+('Marketing digital', 'Consultoria em marketing para eventos', 7),
+('Venda de ingressos online', 'Plataforma de vendas de ingressos', 8),
+('Tecnologia interativa', 'Tecnologia interativa para eventos', 9),
+('Limpeza pós-evento', 'Serviço de limpeza após evento', 10);
+
+
+INSERT INTO Contrato (data_contrato, valor, id_evento, id_fornecedor) VALUES
+('2025-06-01', 5000.00, 1, 1),
+('2025-06-05', 8000.00, 2, 2),
+('2025-06-10', 12000.00, 3, 3),
+('2025-06-15', 10000.00, 4, 4),
+('2025-06-20', 15000.00, 5, 5),
+('2025-06-25', 6000.00, 6, 6),
+('2025-07-01', 7000.00, 7, 7),
+('2025-07-05', 9500.00, 8, 8),
+('2025-07-10', 11000.00, 9, 9),
+('2025-07-15', 13000.00, 10, 10);
+
+
+INSERT INTO Equipe (nome, funcao, contato, id_evento) VALUES
+('Carlos Silva', 'Segurança', '999988888', 1),
+('Juliana Costa', 'Recepcionista', '998877665', 2),
+('Paulo Pereira', 'Coordenador', '987654321', 3),
+('Fernanda Lima', 'Auxiliar', '976543210', 4),
+('Lucas Almeida', 'Catering', '965432109', 5),
+('Marcos Oliveira', 'Iluminação', '954321098', 6),
+('Sandra Ribeiro', 'Limpeza', '943210987', 7),
+('Roberto Souza', 'Transporte', '932109876', 8),
+('Patrícia Silva', 'Vendas', '921098765', 9),
+('Gustavo Martins', 'Tecnologia', '910987654', 10);
+
+
+INSERT INTO Avaliacao (nota, comentario, data, id_evento, id_cliente) VALUES
+(5, 'Evento excelente! Voltarei em breve.', '2025-07-16', 1, 1),
+(4, 'Muito bom, mas poderia ter mais opções de comida.', '2025-07-19', 2, 2),
+(3, 'O evento foi bom, mas atrasou um pouco.', '2025-07-21', 3, 3),
+(5, 'Show maravilhoso, super recomendo.', '2025-07-23', 4, 4),
+(4, 'Boa organização, mas poderia ter mais segurança.', '2025-07-25', 5, 5),
+(5, 'Adorei o atendimento e a infraestrutura.', '2025-07-28', 6, 6),
+(3, 'O evento foi bom, mas o espaço estava apertado.', '2025-07-30', 7, 7),
+(5, 'Excelente evento, voltarei na próxima!', '2025-08-02', 8, 8),
+(4, 'Foi bom, mas poderia ter mais opções de ingressos.', '2025-08-05', 9, 9),
+(5, 'Evento perfeito, tudo organizado.', '2025-08-07', 10, 10);
+
+
+INSERT INTO CheckIn (data_hora, id_evento, id_cliente) VALUES
+('2025-07-15 19:45:00', 1, 1),
+('2025-07-18 18:30:00', 2, 2),
+('2025-08-10 08:00:00', 3, 3),
+('2025-09-01 09:30:00', 4, 4),
+('2025-09-15 07:45:00', 5, 5),
+('2025-10-05 13:30:00', 6, 6),
+('2025-10-20 21:45:00', 7, 7),
+('2025-11-10 17:30:00', 8, 8),
+('2025-11-15 15:30:00', 9, 9),
+('2025-12-01 10:30:00', 10, 10);
+
+
+INSERT INTO CupomDesconto (codigo, percentual, validade) VALUES
+('CUPOM10', 10.00, '2025-07-31'),
+('CUPOM20', 20.00, '2025-08-15'),
+('CUPOM15', 15.00, '2025-08-30'),
+('CUPOM25', 25.00, '2025-09-10'),
+('CUPOM30', 30.00, '2025-09-20'),
+('CUPOM50', 50.00, '2025-10-01'),
+('CUPOM10', 10.00, '2025-10-15'),
+('CUPOM5', 5.00, '2025-11-01'),
+('CUPOM20', 20.00, '2025-11-15'),
+('CUPOM30', 30.00, '2025-12-01');
+
+
+
+-- Seleciona todos os eventos com seus respectivos organizadores e locais
+SELECT nome, data, horario, capacidade, descricao FROM Evento;
+
+
+
+-- Seleciona eventos que ocorrem após o dia 1º de agosto de 2025, com capacidade maior que 500
+SELECT nome, data, capacidade FROM Evento
+WHERE data > '2025-08-01' AND capacidade > 500;
+
+
+
+-- Exemplo de INNER JOIN entre Evento e Organizador
+SELECT e.nome AS evento_nome, o.nome AS organizador_nome
+FROM Evento e
+INNER JOIN Organizador o ON e.id_organizador = o.id_organizador;
+
+
+
+-- Seleciona todos os eventos de "Teatro" ordenados por data
+SELECT nome, data FROM Evento
+WHERE id_categoria = (SELECT id_categoria FROM CategoriaEvento WHERE nome_categoria = 'Teatro')
+ORDER BY data;
+
+
+
+-- Conta o número de eventos por categoria, mas apenas para categorias com mais de 2 eventos
+SELECT id_categoria, COUNT(*) AS total_eventos
+FROM Evento
+GROUP BY id_categoria
+HAVING COUNT(*) > 2;
